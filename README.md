@@ -22,8 +22,9 @@ Installation and/or building from scratch
 Python 3.8 is required.
 Install jamp.py-v7 with pip.
 Navigate to GnuCash folder with SQLite3 database. 
-Extract DB schema (jam will use demo.sqlite DB initially from below script):
+Extract DB schema (Jam will use demo.sqlite DB initially from below script, change this on Parameters if needed):
 
+```
 cp your_gnucash.sqlite  demo.sqlite
 
 sqlite3 demo.sqlite .schema > schema.sqlite
@@ -33,20 +34,29 @@ jam-project.py
 python ai8.py (file is from utils folder in this repo)
 ...
 ✅ Done. Inserted 24 items and 254 fields.
+```
 
 run jam.py with:
+```
 ./server.py
+```
+That's it. The Web app is created from scratch. 
 
-That's it. 
-
-The Web app is created from scratch. If one needs a DB schema from mysql or some other database, extract DB schema in some other way first. Or, Import tables manually from Jam.py using supported database (slower, but takes only 30 mins o so).
-
-Now we can create drop-down menu (no code), move stuff around, create lookups to tables as per above diagram, start creating Dashboards, 
-users, etc. One can also start thinking about offline support with using some sort of replication.
-
-Or, one can source this repo and try it first. The App is using sample database from [gnucash-web](https://github.com/joshuabach/gnucash-web/).
+Access Web app as usual.
 
 
+If one needs a DB schema from mysql or some other database, extract DB schema in some other way first.
 
+Or, Import tables manually from Jam.py using supported database (slower, but takes only 30 mins or so).
+No need for any script to add tables to Jam.py. It is all **no code** at this stage.
 
+Now we can create drop-down menu's (no code), move stuff around, create lookups to tables as per above diagram, start creating Dashboards, users, etc. 
+
+One can also start thinking about offline support with using some sort of replication to the Web server hosting this app.
+
+For example [litestream](https://litestream.io/).
+
+Or, one can source this repo and try it first. I will try to add more features to it. Like a Report. Or Dash.
+
+The App is using sample database from [gnucash-web](https://github.com/joshuabach/gnucash-web/).
 
