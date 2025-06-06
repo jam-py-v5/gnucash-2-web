@@ -13,7 +13,8 @@ By looking into [piecash](https://pypi.org/project/piecash/) library, the GnuCas
 https://piecash.readthedocs.io/en/master/object_model.html#schema
 
 The lookups to all tables are defined on the Diagram. This is providing the way to create a lookups
-within Jam.py. Which is again trivial to do. No coding involved.
+within Jam.py. Which is again trivial to do. No coding involved. 
+I've crossed all lookups added to App on screenshots/schema.png, as an reminder.
 
 
 Installation and/or building from scratch
@@ -23,10 +24,15 @@ Installation and/or building from scratch
 
 [![alt text](https://github.com/jam-py-v5/gnucash-2-web/blob/main/screenshots/gnucash_jampy.gif?raw=true)](https://northwind.pythonanywhere.com)
 
-Python 3.8 is required.
+Python >3.8 is required.
+
 Install jamp.py-v7 with pip.
-Navigate to GnuCash folder with SQLite3 database. 
-Extract DB schema (Jam will use demo.sqlite DB initially from below script. Change this on Builder/Project/Database if needed. Builder is normally on 127.0.0.1:8080/builder.html
+
+Navigate to GnuCash folder with SQLite3 database. Or to some folder with it. Temp will do.
+
+Extract DB schema. Jam will use demo.sqlite DB initially from below ai8.py script. 
+Change this on Builder/Project/Database if needed after starting the App.
+Builder is on 127.0.0.1:8080/builder.html
 
 ```
 cp your_gnucash.sqlite  demo.sqlite
@@ -49,16 +55,19 @@ That's it. The Web app is created from scratch.
 Access Web app as usual.
 
 
-If one needs a DB schema from mysql or some other database, extract DB schema in some other way first. Name it schema.sql and run the same script. Adjust ai8.py if needed tho.
+If one needs a DB schema from mysql or some other database, extract DB schema in some other way first. Name it schema.sql and run the same script. Adjust ai8.py if needed tho. Use AI for this.
 
-**Or, Import tables manually from Jam.py using supported database** (slower, but takes only 30 mins or so).
-No need for any script to add tables to Jam.py. It is all **no code** at this stage.
+**Or, Import tables manually from Jam.py using a supported database** (slower, but takes only 30 mins or so).
+No need for any script to add tables to Jam.py. It is all **no code** at this stage. 
+Just start the App and start Importing tables (press F4 and check on "DB Manual Mode").
 
 Now we can create drop-down menu's (no code), move stuff around, create lookups to tables as per above diagram, start creating Dashboards, users, etc. As per Jam.py Docs.
 
-One can also start thinking about offline support with using some sort of replication to the Web server hosting this app. Hosting Jam.py is trivial on ie, PythonAnywhere. Or self hosting. 
+One can also start thinking about offline support with using some sort of replication to the Web server hosting this app. 
 
 For example [litestream](https://litestream.io/).
+
+Hosting Jam.py is trivial on ie, PythonAnywhere. Or self hosting. RasPi? No worries.
 
 **Or, one can source this repo and try it first**. Replace sample.sqlite with yours. Or, point Jam.py to your SQLite database on Builder/Project/Database. Did not try other databases like mysql tho.
 
