@@ -20,7 +20,7 @@ Why this App?
 --------------
 
 If one needs quick Web access to GNUCash database, this App might help. Since no coding involved, runs anywhere, why not to try it? 
-At this stage it is WIP. Wait for Master/Details and Dashs, if I figure put the relations.
+At this stage it is WIP. Wait for Master/Details and Dashs, if I figure out the relations.
 Reports? No probs, can be ported from GnuCash. All on Web.
 
 
