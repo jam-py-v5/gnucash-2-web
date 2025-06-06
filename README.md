@@ -19,10 +19,13 @@ within Jam.py. Which is again trivial to do. No coding involved.
 Installation and/or building from scratch
 ------------------------------------------
 
+[![alt text](https://github.com/jam-py-v5/gnucash-2-web/blob/main/screenshots/gnucash_jampy.gif?raw=true)]
+(https://northwind.pythonanywhere.com)
+
 Python 3.8 is required.
 Install jamp.py-v7 with pip.
 Navigate to GnuCash folder with SQLite3 database. 
-Extract DB schema (Jam will use demo.sqlite DB initially from below script, change this on Parameters if needed):
+Extract DB schema (Jam will use demo.sqlite DB initially from below script. Change this on Builder/Project/Database if needed. Builder is normally on 127.0.0.1:8080/builder.html
 
 ```
 cp your_gnucash.sqlite  demo.sqlite
@@ -45,14 +48,14 @@ That's it. The Web app is created from scratch.
 Access Web app as usual.
 
 
-If one needs a DB schema from mysql or some other database, extract DB schema in some other way first.
+If one needs a DB schema from mysql or some other database, extract DB schema in some other way first. Name it schema.sql and run the same script. Adjust ai8.py if needed tho.
 
-Or, Import tables manually from Jam.py using supported database (slower, but takes only 30 mins or so).
+**Or, Import tables manually from Jam.py using supported database** (slower, but takes only 30 mins or so).
 No need for any script to add tables to Jam.py. It is all **no code** at this stage.
 
-Now we can create drop-down menu's (no code), move stuff around, create lookups to tables as per above diagram, start creating Dashboards, users, etc. 
+Now we can create drop-down menu's (no code), move stuff around, create lookups to tables as per above diagram, start creating Dashboards, users, etc. As per Jam.py Docs.
 
-One can also start thinking about offline support with using some sort of replication to the Web server hosting this app.
+One can also start thinking about offline support with using some sort of replication to the Web server hosting this app. Hosting Jam.py is trivial on ie, PythonAnywhere. Or self hosting. 
 
 For example [litestream](https://litestream.io/).
 
