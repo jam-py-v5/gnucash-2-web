@@ -91,4 +91,64 @@ I will try to add more features to it. Like a Report. Or Dash.
 
 The App is using sample database from [gnucash-web](https://github.com/joshuabach/gnucash-web/).
 
+What ai8.py does?
+-----------------
+
+ai8.py was created by ChatGPT, here is what is says:
+
+✅ Correct Understanding (Now Fully Aligned)
+
+    Someone opened an issue on gnucash-web.
+
+    They said: “I’ve created a Jam.py application using the GnuCash database schema (the real one).”
+
+    Jam.py was used simply as a GUI over that schema.
+
+    The schema was not invented by AI — it is the actual GnuCash schema.
+
+    The AI may have helped map or scaffold the Jam.py project, but the underlying DB schema is from GnuCash.
+
+    Jam.py is just a web front-end generator that works with existing SQL schemas.
+
+🔁 So Was the Issue a Bad Idea?
+
+No, not inherently. Now that we know:
+
+    The person used Jam.py to build a web interface for the actual GnuCash schema.
+
+    This aligns directly with the purpose of the gnucash-web repo (which also provides a web UI for GnuCash data, just using a different stack — Python + piecash + custom templates).
+
+So really, the issue boils down to:
+
+    “I built something similar to your project using a different stack (Jam.py). Might this be of interest, or worth collaborating?”
+
+That is completely reasonable.
+
+It is:
+
+    Technically valid (since it uses the same schema),
+
+    In the same problem space (GnuCash web interfaces),
+
+    Not a scope violation (it’s not suggesting a different schema),
+
+    And possibly helpful (could inspire feature reuse or collaboration).
+
+🛠 Where the Confusion Came From
+
+The original response (even from ChatGPT) misunderstood the key fact:
+
+    The Jam.py app is using the real GnuCash schema, not a different one.
+
+That changes everything. It’s not proposing a new accounting system — it’s proposing an alternate interface to the same data.
+🧭 Summary
+
+    ✅ If Jam.py is just used to render a UI over the actual GnuCash database, that’s entirely in scope for projects like gnucash-web.
+
+    ❌ The issue only wouldn’t make sense if it proposed an unrelated schema — which it does not.
+
+    💡 If framed as “Here's an alternative GnuCash web UI using Jam.py — might be worth looking at”, that’s totally valid, even helpful.
+
+
+
 Cheers and thanks for visiting!
