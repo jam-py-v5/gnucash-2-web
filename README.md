@@ -19,8 +19,7 @@ within Jam.py. Which is again trivial to do. No coding involved.
 Installation and/or building from scratch
 ------------------------------------------
 
-[![alt text](https://github.com/jam-py-v5/gnucash-2-web/blob/main/screenshots/gnucash_jampy.gif?raw=true)]
-(https://northwind.pythonanywhere.com)
+[![alt text](https://github.com/jam-py-v5/gnucash-2-web/blob/main/screenshots/gnucash_jampy.gif?raw=true)](https://northwind.pythonanywhere.com)
 
 Python 3.8 is required.
 Install jamp.py-v7 with pip.
