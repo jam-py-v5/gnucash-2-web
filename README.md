@@ -13,8 +13,13 @@ By looking into [piecash](https://pypi.org/project/piecash/) library, the GnuCas
 https://piecash.readthedocs.io/en/master/object_model.html#schema
 
 The lookups to all tables are defined on the Diagram. This is providing the way to create a lookups
-within Jam.py. Which is again trivial to do. No coding involved. 
+within Jam.py. Which is again trivial to do. **No coding involved**. 
 I've crossed all lookups added to App on screenshots/schema.png, as an reminder.
+
+Why this App?
+--------------
+
+If one needs quick Web access to GNUCash database, this App might help. Since no coding involved, runs anywhere, why not to try it?
 
 
 Installation and/or building from scratch
@@ -22,11 +27,15 @@ Installation and/or building from scratch
 
 **Note: always backup your database! Jam.py is a database framework, it CAN change database structure!**
 
+
 [![alt text](https://github.com/jam-py-v5/gnucash-2-web/blob/main/screenshots/gnucash_jampy.gif?raw=true)](https://northwind.pythonanywhere.com)
 
 Python >3.8 is required.
 
 Install jamp.py-v7 with pip.
+
+Building from scratch
+----------------------
 
 Navigate to GnuCash folder with SQLite3 database. Or to some folder with it. Temp will do.
 
@@ -50,12 +59,13 @@ run jam.py with:
 ```
 ./server.py
 ```
-That's it. The Web app is created from scratch. 
+That's it. The Web app is created from scratch with zero coding.
 
 Access Web app as usual.
 
 
 If one needs a DB schema from mysql or some other database, extract DB schema in some other way first. Name it schema.sql and run the same script. Adjust ai8.py if needed tho. Use AI for this.
+
 
 **Or, Import tables manually from Jam.py using a supported database** (slower, but takes only 30 mins or so).
 No need for any script to add tables to Jam.py. It is all **no code** at this stage. 
@@ -69,9 +79,14 @@ For example [litestream](https://litestream.io/).
 
 Hosting Jam.py is trivial on ie, PythonAnywhere. Or self hosting. RasPi? No worries.
 
-**Or, one can source this repo and try it first**. Replace sample.sqlite with yours. Or, point Jam.py to your SQLite database on Builder/Project/Database. Did not try other databases like mysql tho.
+Installing this App
+-------------------
+
+**One can source this repo and try it first**. Run it "as is" or replace sample.sqlite with yours. Or, point Jam.py to your SQLite database somewhere on Builder/Project/Database. A lot of options here.
+Did not try other databases like mysql tho.
 
 I will try to add more features to it. Like a Report. Or Dash.
 
 The App is using sample database from [gnucash-web](https://github.com/joshuabach/gnucash-web/).
 
+Cheers and thanks for visiting!
