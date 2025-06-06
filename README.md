@@ -58,7 +58,9 @@ One can also start thinking about offline support with using some sort of replic
 
 For example [litestream](https://litestream.io/).
 
-Or, one can source this repo and try it first. I will try to add more features to it. Like a Report. Or Dash.
+**Or, one can source this repo and try it first**. Replace sample.sqlite with yours. Or, point Jam.py to your SQLite database on Builder/Project/Database. Did not try other databases like mysql tho.
+
+I will try to add more features to it. Like a Report. Or Dash.
 
 The App is using sample database from [gnucash-web](https://github.com/joshuabach/gnucash-web/).
 
