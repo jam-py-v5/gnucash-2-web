@@ -65,11 +65,11 @@ That's it. The Web app is created from scratch with zero coding.
 
 Access Web app as usual.
 
-
 If one needs a DB schema from mysql or some other database, extract DB schema in some other way first. Name it schema.sql and run the same script. Adjust ai8.py if needed tho. Use AI for this.
+In reality, just download this App and point Jam.py to your chosen database. If it does not work with ie mysql, due to mysql naming convention, that's super easy to fix. 
+Do **Export** on builder.html, create a new Jam.py project with your chosen database and do **Import**. It should work then, respecting the naming convention. 
 
-
-**Or, Import tables manually from Jam.py using a supported database** (slower, but takes only 30 mins or so).
+**Or, Import tables manually TO Jam.py using a supported database** (slower, but takes only 30 mins or so).
 No need for any script to add tables to Jam.py. It is all **no code** at this stage. 
 Just start the App and start Importing tables (press F4 and check on "DB Manual Mode").
 
@@ -84,7 +84,8 @@ Hosting Jam.py is trivial on ie, PythonAnywhere. Or self hosting. RasPi? No worr
 Installing this App
 -------------------
 
-**One can source this repo and try it first**. Run it "as is" or replace sample.sqlite with yours. Or, point Jam.py to your SQLite database somewhere on Builder/Project/Database. A lot of options here.
+**Or one can source this repo and try it first, as on video**. Run it "as is" or replace sample.sqlite with yours. Or, point Jam.py to your SQLite database somewhere on Builder/Project/Database, as per above. 
+A lot of options here.
 Did not try other databases like mysql tho.
 
 I will try to add more features to it. Like a Report. Or Dash.
@@ -141,6 +142,7 @@ The original response (even from ChatGPT) misunderstood the key fact:
     The Jam.py app is using the real GnuCash schema, not a different one.
 
 That changes everything. It’s not proposing a new accounting system — it’s proposing an alternate interface to the same data.
+
 🧭 Summary
 
     ✅ If Jam.py is just used to render a UI over the actual GnuCash database, that’s entirely in scope for projects like gnucash-web.
