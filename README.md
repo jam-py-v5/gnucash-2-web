@@ -84,7 +84,8 @@ Hosting Jam.py is trivial on ie, PythonAnywhere. Or self hosting. RasPi? No worr
 Installing this App
 -------------------
 
-**Or one can source this repo and try it first, as on video**. Run it "as is" or replace sample.sqlite with yours. Or, point Jam.py to your SQLite database somewhere on Builder/Project/Database, as per above. 
+**Or one can source this repo and try it first, as on video**. Run it "as is" or replace sample.sqlite with yours. 
+Or, point Jam.py to your SQLite database somewhere on Builder/Project/Database, as per above. Full path to file is supported.
 A lot of options here.
 Did not try other databases like mysql tho.
 
