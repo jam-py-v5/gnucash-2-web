@@ -34,12 +34,12 @@ Installation and/or building from scratch
 
 Python >3.8 is required.
 
-Install jamp.py-v7 with pip.
+Install jam.py-v7 with pip. standard-imghdr is also needed for Python >=3.13
 
 Building from scratch
 ----------------------
 
-Navigate to GnuCash folder with SQLite3 database. Or to some folder with it. Temp will do.
+For learning how to "scaffold" Jam.py App in one second or so, navigate to GnuCash folder with SQLite3 database. Or to some folder with it. Temp will do.
 
 Extract DB schema. Jam will use demo.sqlite DB initially from below ai8.py script. 
 Change this on Builder/Project/Database if needed after starting the App.
@@ -61,7 +61,7 @@ run jam.py with:
 ```
 ./server.py
 ```
-That's it. The Web app is created from scratch with zero coding.
+That's it. The Web app is created from scratch with zero coding and zero effort.
 
 Access Web app as usual.
 
@@ -90,7 +90,7 @@ Did not try other databases like mysql tho.
 
 I will try to add more features to it. Like a Report. Or Dash.
 
-The App is using sample database from [gnucash-web](https://github.com/joshuabach/gnucash-web/).
+The App is using sample database(s) from [gnucash-web](https://github.com/joshuabach/gnucash-web/).
 
 What ai8.py does?
 -----------------
