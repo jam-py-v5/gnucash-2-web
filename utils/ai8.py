@@ -6,7 +6,7 @@ import json
 INPUT_SCHEMA_FILE = 'schema.sql'
 DB_FILE = 'admin.sqlite'
 
-RESERVED_FIELD_NAMES = {"active", "class", "def", "from", "global", "import", "lambda", "placeholder", "hidden", "progress", "task", "label, "badge", "order", "privileges"}
+RESERVED_FIELD_NAMES = {"active", "class", "def", "from", "global", "import", "lambda", "placeholder", "hidden", "progress", "task", "label", "badge", "order", "privileges"}
 
 def sanitize_field_name(name):
     return name + "_f" if name in RESERVED_FIELD_NAMES else name
