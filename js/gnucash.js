@@ -28,7 +28,7 @@ function Events1() { // gnucash
 		$('#container').show();
 	
 		task.create_menu($("#menu"), $("#content"), {
-			splash_screen: '<h1 class="text-center">Jam.py Demo Application</h1>',
+			splash_screen: '<h1 class="text-center">Jam.py GnuCash Web Interface Application</h1>',
 			view_first: true
 		});
 	
@@ -345,5 +345,166 @@ function Events1() { // gnucash
 }
 
 task.events.events1 = new Events1();
+
+function Events10() { // gnucash.catalogs.accounts 
+
+	// function on_field_get_text(field) {
+	//	 if (field.field_name === 'parentGuid' && field.value) {
+	//		 return field.owner.name.lookup_text + ' ' + field.lookup_text;
+	//	 }
+	// }
+}
+
+task.events.events10 = new Events10();
+
+function Events33() { // gnucash.analytics.dashboards 
+
+	function on_view_form_created(item) {
+		show_acc(item, item.view_form.find('#acc-canvas').get(0).getContext('2d'));
+		// show_categories(item, item.view_form.find('#categories-canvas').get(0).getContext('2d'));
+	}
+	
+	function show_acc(item, ctx) {
+		var acc = item.task.accounts.copy({handlers: false});
+		acc.open(
+			{
+				fields: ['accountType', 'name', 'commodityScu'], 
+				funcs: {commodityScu: 'sum'},
+				group_by: ['accountType'],
+				order_by: ['-commodityScu'],
+				limit: 10
+			}, 
+			function() {
+				var labels = [],
+					data = [],
+					colors = [];
+				acc.each(function(i) {
+					labels.push(i.accountType.display_text);
+					data.push(i.commodityScu.value.toFixed(2));
+					colors.push(lighten('#006bb3', (i.rec_no - 1) / 10));
+				});
+				acc.first();
+				// acc.category.field_caption = 'Categories';			
+				draw_chart(item, ctx, labels, data, colors, 'Accounts');
+				acc.create_table(item.view_form.find('#acc-table'), 
+					{row_count: 10, dblclick_edit: false});						
+			}
+		);
+		return acc;
+	}
+	
+	function show_categories(item, ctx) {
+		var acc = item.task.account_transactions.copy({handlers: false});
+		acc.open(
+			{
+				fields: ['id', 'transaction_amount', 'category', 'income_or_expense'], 
+				funcs: {transaction_amount: 'sum'},
+				group_by: ['category'],
+				order_by: ['-transaction_amount'],
+				limit: 10
+			}, 
+			function() {
+				var labels = [],
+					data = [],
+					colors = [];
+				acc.each(function(i) {
+					labels.push(i.category.display_text);
+					data.push(i.transaction_amount.value);
+					colors.push(lighten('#006bb3', (i.rec_no - 1) / 10));
+				});
+				acc.first();
+				// acc.category.field_caption = 'Expense/Income';
+				draw_chart(item, ctx, labels, data, colors, 'Transactions');
+				acc.create_table(item.view_form.find('#categories-table'), 
+					{row_count: 7, dblclick_edit: false});						
+			}
+		);
+		return acc;
+	}
+	
+	
+	
+	function draw_chart(item, ctx, labels, data, colors, title) {
+		new Chart(ctx,{
+			type: 'bar',
+			data: {
+				labels: labels,
+				datasets: [
+					{
+						data: data,
+						backgroundColor: colors
+					}
+				]					
+			},
+			options: {
+				//  title: {
+				//	 display: true,
+				//	 fontsize: 14,
+				//	 text: title
+				// },
+				// legend: {
+				//	 position: 'bottom',
+				// },
+					plugins: {
+					  legend: {
+						 display: false,
+						 position: 'top',
+					  },
+					title: {
+						display: true,
+						text: title,
+					},				
+				}
+			}
+		});
+	}
+	function draw_pie(item, ctx, labels, data, colors, title) {
+		new Chart(ctx,{
+			type: 'pie',
+			data: {
+				labels: labels,
+				datasets: [
+					{
+						data: data,
+						backgroundColor: colors
+					}
+				]					
+			},
+			options: {
+				 title: {
+					display: true,
+					fontsize: 14,
+					text: title
+				},
+				legend: {
+					position: 'bottom',
+				},
+			}
+		});
+	}
+	
+	function lighten(color, luminosity) {
+		color = color.replace(/[^0-9a-f]/gi, '');
+		if (color.length < 6) {
+			color = color[0]+ color[0]+ color[1]+ color[1]+ color[2]+ color[2];
+		}
+		luminosity = luminosity || 0;
+		var newColor = "#", c, i, black = 0, white = 255;
+		for (i = 0; i < 3; i++) {
+			c = parseInt(color.substr(i*2,2), 16);
+			c = Math.round(Math.min(Math.max(black, c + (luminosity * white)), white)).toString(16);
+			newColor += ("00"+c).substr(c.length);
+		}
+		return newColor; 
+	}
+	this.on_view_form_created = on_view_form_created;
+	this.show_acc = show_acc;
+	this.show_categories = show_categories;
+	this.draw_chart = draw_chart;
+	this.draw_pie = draw_pie;
+	this.lighten = lighten;
+}
+
+task.events.events33 = new Events33();
 
 })(jQuery, task)
