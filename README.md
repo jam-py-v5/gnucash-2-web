@@ -23,6 +23,9 @@ At this stage, it is a work in progress (WIP). Master–detail views and dashboa
 
 All on the web.
 
+To contribute, super easy - just send us the admin.sqlite file to mailgroup  https://groups.google.com/g/jam-py
+Or do the github fork and pull. Or do the Export on Builder and send a zip file (google blocks this). So attach here on Issues.
+
 Installation and/or building from scratch
 ------------------------------------------
 
