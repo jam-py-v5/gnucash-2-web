@@ -34,10 +34,10 @@ Installation and/or building from scratch
 
 Python >3.8 is required.
 
-Install jam.py-v7 with pip. standard-imghdr is also needed for Python >=3.13
+Install jam.py-v7 with pip.
 
 
-Run jam.py with:
+Navigate to folder, and run jam.py with:
 ```
 ./server.py
 ```
@@ -45,13 +45,9 @@ That's it.
 
 Access Web app as usual.
 
-If one needs a DB schema from mysql or some other database **Import tables manually TO Jam.py using a supported database** (takes only 30 mins or so).
-It is all **no code** at this stage. 
-Just start the App and start Importing tables (press F4 and check on "DB Manual Mode").
+If one needs a DB access to MYSQL or Postgres, press F4 on the Builder, change the database (providing drivers are installed), and off u go. 
 
-Now we can create drop-down menu's (no code), move stuff around, create lookups to tables as per above diagram, start creating Dashboards, users, etc. As per Jam.py Docs.
-
-One can also start thinking about offline support with using some sort of replication to the Web server hosting this app. 
+One can also start thinking about offline support with using some sort of replication to the Web server hosting Sqlite app. 
 
 For example [litestream](https://litestream.io/).
 
@@ -60,13 +56,11 @@ Hosting Jam.py is trivial on ie, PythonAnywhere. Or self hosting. RasPi? No worr
 Installing this App
 -------------------
 
-Run it "as is" or replace sample.sqlite with yours. 
+Run it "as is" or replace sample.sqlite with yours on Builder with pressing F4.
 Or, point Jam.py to your SQLite database somewhere on Builder/Project/Database, as per above. Full path to file is supported.
 A lot of options here.
 Did not try other databases like mysql tho.
 
 I will try to add more features to it. Like a Report. Or a Dash.
-
-The App is using sample database(s) from [gnucash-web](https://github.com/joshuabach/gnucash-web/).
 
 Cheers and thanks for visiting!
