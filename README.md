@@ -26,7 +26,7 @@ All on the web.
 Installation and/or building from scratch
 ------------------------------------------
 
-**Note: always backup your database! Jam.py is a database framework, it CAN change database structure!**
+**Note: Always back up your database. Jam.py is a database framework and can modify the database structure.**
 
 
 [![alt text](https://github.com/jam-py-v5/gnucash-2-web/blob/main/screenshots/gnucash_jampy.gif?raw=true)](https://northwind.pythonanywhere.com)
