@@ -5,29 +5,28 @@ Jam.py Web interface for GnuCash.
 
 Inspired by [gnucash-web](https://github.com/joshuabach/gnucash-web/)
 
-The idea is pretty much the same, to enable the Web access to GnuCash database.
-As Jam.py supports all GnuCash databases, except xml, it is trivial to use any of it.
 
-By looking into [piecash](https://pypi.org/project/piecash/) library, the GnuCash DB schema is this:
+The idea is essentially the same: to enable web access to a GnuCash database. Since Jam.py supports all GnuCash database formats except XML, it is trivial to use any of them.
+
+By looking into the piecash library, the GnuCash database schema is documented here:
 
 https://piecash.readthedocs.io/en/master/object_model.html#schema
 
-The lookups to all tables are defined on the Diagram. This is providing the way to create a lookups
-within Jam.py. Which is again trivial to do. **No coding involved**. 
-I've crossed all lookups added to App on screenshots/schema.png, as an reminder.
+All table lookups are defined in the diagram. This provides a clear way to create lookups within Jam.py, which again is trivial to do, no coding involved. I’ve crossed all lookups added to the app in the screenshots (schema.png) as a reminder.
 
-Why this App?
+Why this app?
 --------------
 
-If one needs quick Web access to GNUCash database, this App might help. Since no coding involved, runs anywhere, why not to try it? 
-At this stage it is WIP. Wait for Master/Details and Dashs, if I figure out the relations.
-Reports? No probs, can be ported from GnuCash. All on Web.
+If you need quick web access to a GnuCash database, this app might help. Since no coding is involved and it runs anywhere, why not give it a try?
 
+At this stage, it is a work in progress (WIP). Master–detail views and dashboards are coming, once the relationships are fully figured out. Reports? No problem - they can be ported from GnuCash.
+
+All on the web.
 
 Installation and/or building from scratch
 ------------------------------------------
 
-**Note: always backup your database! Jam.py is a database framework, it CAN change database structure!**
+**Note: Always back up your database. Jam.py is a database framework and can modify the database structure.**
 
 
 [![alt text](https://github.com/jam-py-v5/gnucash-2-web/blob/main/screenshots/gnucash_jampy.gif?raw=true)](https://northwind.pythonanywhere.com)
