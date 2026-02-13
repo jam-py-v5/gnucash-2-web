@@ -39,10 +39,16 @@ Python >3.8 is required.
 Install jam.py-v7 with pip.
 
 
-Navigate to folder, and run jam.py with:
+Download this repository, navigate to folder, and run jam.py with:
+
 ```
 ./server.py
 ```
+
+or for Windows:
+
+https://jampy-docs.readthedocs.io/projects/V7/en/latest/intro/install.html
+
 That's it. 
 
 Access Web app as usual.
