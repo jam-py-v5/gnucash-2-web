@@ -49,6 +49,10 @@ or for Windows:
 
 https://jampy-docs.readthedocs.io/projects/V7/en/latest/intro/install.html
 
+```
+python server.py
+```
+
 That's it. 
 
 Access Web app as usual.
